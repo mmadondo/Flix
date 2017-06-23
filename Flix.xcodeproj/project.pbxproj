@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3DDF640CA174858A4B83B4B6 /* Pods_Flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5286CAB8BA18CB488BE60E31 /* Pods_Flix.framework */; };
 		46407BCA1EFC874900C92B8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46407BC91EFC874900C92B8D /* DetailViewController.swift */; };
+		46407BCC1EFCD40400C92B8D /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46407BCB1EFCD40400C92B8D /* InfiniteScrollActivityView.swift */; };
 		46B174841EFB1F1C00380E27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B174831EFB1F1C00380E27 /* AppDelegate.swift */; };
 		46B174891EFB1F1C00380E27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B174871EFB1F1C00380E27 /* Main.storyboard */; };
 		46B1748B1EFB1F1C00380E27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B1748A1EFB1F1C00380E27 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0D607A5242214C68086D3342 /* Pods-FlixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixUITests/Pods-FlixUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		46407BC91EFC874900C92B8D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		46407BCB1EFCD40400C92B8D /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		46B174801EFB1F1C00380E27 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B174831EFB1F1C00380E27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B174881EFB1F1C00380E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				46B174B31EFB488B00380E27 /* MovieCell.swift */,
+				46407BCB1EFCD40400C92B8D /* InfiniteScrollActivityView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46407BCC1EFCD40400C92B8D /* InfiniteScrollActivityView.swift in Sources */,
 				46B174B21EFB2B6200380E27 /* NowPlayingViewController.swift in Sources */,
 				46B174841EFB1F1C00380E27 /* AppDelegate.swift in Sources */,
 				46B174B41EFB488B00380E27 /* MovieCell.swift in Sources */,
