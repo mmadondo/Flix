@@ -90,9 +90,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
+        //let rating = movie["vote_average"] as! String
         
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
+        //cell.ratingLabel.text = rating
         
         let posterPathStr = movie["poster_path"] as! String
         let baseURLString = "https://image.tmdb.org/t/p/w500"
