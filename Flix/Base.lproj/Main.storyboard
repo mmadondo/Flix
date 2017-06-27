@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,41 +22,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="171" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-jU-cqU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="171" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-jU-cqU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="171" id="0cp-nC-hqm" customClass="MovieCell" customModule="Flix" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0cp-nC-hqm" id="VWK-Jk-pkE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-fX-H24">
-                                                    <rect key="frame" x="8" y="20" width="115" height="147"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-fX-H24">
+                                                    <rect key="frame" x="8" y="8" width="115" height="155"/>
                                                     <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="ptM-14-KyD"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An Amazon princess comes to the world of Man to become the greatest of the female superheroes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viF-Mq-eJP">
-                                                    <rect key="frame" x="124" y="64" width="251" height="103"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuX-wY-XeL">
-                                                    <rect key="frame" x="124" y="27" width="251" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuX-wY-XeL">
+                                                    <rect key="frame" x="131" y="8" width="236" height="51.5"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An Amazon princess comes to the world of Man to become the greatest of the female superheroes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viF-Mq-eJP">
+                                                    <rect key="frame" x="131" y="67.5" width="236" height="103"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="103" id="GL4-Bj-VG9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="JuX-wY-XeL" firstAttribute="leading" secondItem="viF-Mq-eJP" secondAttribute="leading" id="6eC-Tw-ntM"/>
+                                                <constraint firstItem="viF-Mq-eJP" firstAttribute="top" secondItem="JuX-wY-XeL" secondAttribute="bottom" constant="8" id="6ps-Im-3HX"/>
+                                                <constraint firstItem="IHM-fX-H24" firstAttribute="top" secondItem="VWK-Jk-pkE" secondAttribute="top" constant="8" id="AmL-6e-oa9"/>
+                                                <constraint firstItem="viF-Mq-eJP" firstAttribute="leading" secondItem="JuX-wY-XeL" secondAttribute="leading" id="B4b-e9-vDY"/>
+                                                <constraint firstItem="viF-Mq-eJP" firstAttribute="top" secondItem="JuX-wY-XeL" secondAttribute="bottom" constant="8" symbolic="YES" id="LOG-57-6bw"/>
+                                                <constraint firstItem="IHM-fX-H24" firstAttribute="leading" secondItem="VWK-Jk-pkE" secondAttribute="leading" constant="8" id="Lmr-Zg-Qxk"/>
+                                                <constraint firstItem="viF-Mq-eJP" firstAttribute="leading" secondItem="IHM-fX-H24" secondAttribute="trailing" constant="8" id="NK2-6P-br8"/>
+                                                <constraint firstItem="JuX-wY-XeL" firstAttribute="top" secondItem="IHM-fX-H24" secondAttribute="top" id="Qn8-58-3tm"/>
+                                                <constraint firstAttribute="bottom" secondItem="IHM-fX-H24" secondAttribute="bottom" constant="8" id="UHf-Cy-Gld"/>
+                                                <constraint firstItem="viF-Mq-eJP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VWK-Jk-pkE" secondAttribute="bottomMargin" constant="8" id="Zg3-8f-KBm"/>
+                                                <constraint firstItem="JuX-wY-XeL" firstAttribute="top" secondItem="IHM-fX-H24" secondAttribute="top" id="cGH-iW-CLU"/>
+                                                <constraint firstItem="viF-Mq-eJP" firstAttribute="top" secondItem="JuX-wY-XeL" secondAttribute="bottom" constant="8" id="cwc-yQ-4Gu"/>
+                                                <constraint firstItem="IHM-fX-H24" firstAttribute="top" secondItem="VWK-Jk-pkE" secondAttribute="top" constant="8" id="fMq-Gu-xQ4"/>
+                                                <constraint firstAttribute="trailing" secondItem="viF-Mq-eJP" secondAttribute="trailing" constant="8" id="jxG-4H-bwC"/>
+                                                <constraint firstAttribute="trailing" secondItem="JuX-wY-XeL" secondAttribute="trailing" constant="8" id="lAj-gI-VHH"/>
+                                                <constraint firstAttribute="bottom" secondItem="IHM-fX-H24" secondAttribute="bottom" constant="8" id="rO6-fx-IDK"/>
+                                                <constraint firstItem="IHM-fX-H24" firstAttribute="leading" secondItem="VWK-Jk-pkE" secondAttribute="leadingMargin" id="wBC-Zz-11a"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="overviewLabel" destination="viF-Mq-eJP" id="Ihp-T0-nIH"/>
@@ -72,7 +94,13 @@
                                 <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PvX-jU-cqU" secondAttribute="trailing" id="6RQ-5g-byV"/>
+                            <constraint firstAttribute="bottom" secondItem="PvX-jU-cqU" secondAttribute="bottom" id="EgG-RD-GFR"/>
+                            <constraint firstItem="PvX-jU-cqU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MfA-0E-Txx"/>
+                            <constraint firstItem="PvX-jU-cqU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fIw-mU-LOj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="s3Z-fV-p3p"/>
                     <connections>
@@ -97,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltR-2P-Oe3">
-                                <rect key="frame" x="0.0" y="64" width="375" height="241"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPa-0o-z3n">
@@ -124,16 +152,8 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUQ-vh-ogg">
-                                <rect key="frame" x="124" y="391" width="56" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F1-HM-d8Q">
-                                <rect key="frame" x="-1" y="437" width="367" height="184"/>
+                                <rect key="frame" x="-1" y="399" width="367" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -144,14 +164,6 @@
                                 <rect key="frame" x="8" y="213" width="119" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rotten Tomatoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0z-PQ-zWS">
-                                <rect key="frame" x="195" y="391" width="129" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -159,7 +171,6 @@
                         <outlet property="backDropImageView" destination="ltR-2P-Oe3" id="kWH-FG-fXY"/>
                         <outlet property="overviewLabel" destination="2F1-HM-d8Q" id="s3R-mo-3Vh"/>
                         <outlet property="posterImageView" destination="gLS-Kk-J7K" id="qzs-I3-D84"/>
-                        <outlet property="ratingLabel" destination="E0z-PQ-zWS" id="BRH-nm-iIX"/>
                         <outlet property="releaseDateLabel" destination="YMU-bI-sWU" id="zKl-Qz-wlN"/>
                         <outlet property="titleLabel" destination="WPa-0o-z3n" id="ain-iF-5hF"/>
                     </connections>

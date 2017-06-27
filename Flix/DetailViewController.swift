@@ -27,7 +27,6 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var overviewLabel: UILabel!
     
-    @IBOutlet weak var ratingLabel: UILabel!
     
     var movie: [String: Any]?
     
@@ -40,7 +39,7 @@ class DetailViewController: UIViewController {
             titleLabel.text = movie[MovieKeys.title] as? String
             releaseDateLabel.text = movie["release_date"] as? String
             overviewLabel.text = movie["overview"] as? String
-            ratingLabel.text = movie[MovieKeys.rating] as? String
+            
             
             let backdropPathString = movie[MovieKeys.backdropPath] as! String
             let posterPathString = movie[MovieKeys.posterPath] as! String
