@@ -10,20 +10,15 @@ import UIKit
 import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
-    
-    /*
-     var isMoreDataLoading = false
-     var loadingMoreView:InfiniteScrollActivityView?
-     */
+
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
 
     
-    var movies: [[String: Any]] = []
+    //var movies: [[String: Any]] = []
+    var movies: [Movie] = []
     var refreshControl: UIRefreshControl!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,21 +81,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell //use cell as of type MovieCell
         
-        //indexPath has 2 parts: section & row
-        let movie = movies[indexPath.row]
-        let title = movie["title"] as! String
-        let overview = movie["overview"] as! String
-        //let rating = movie["vote_average"] as! String
-        
-        cell.titleLabel.text = title
-        cell.overviewLabel.text = overview
-        //cell.ratingLabel.text = rating
-        
-        let posterPathStr = movie["poster_path"] as! String
-        let baseURLString = "https://image.tmdb.org/t/p/w500"
-        
-        let posterURL = URL(string: baseURLString + posterPathStr)!
-        cell.posterImageView.af_setImage(withURL: posterURL)
+        cell.movie = movies[indexPath.row]
+
         return cell
     }
     

@@ -12,7 +12,9 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var movies: [[String: Any]] = []
+    //var movies: [[String: Any]] = []
+    
+    var movies: [Movie] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
