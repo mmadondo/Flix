@@ -23,10 +23,9 @@ class Movie {
     init(dictionary: [String: Any]) {
         title = dictionary["title"] as? String ?? "No title"
         overview = dictionary["overview"] as? String ?? "No overview"
-        posterUrl = dictionary["posterUrl"] as! URL
         releaseDate = dictionary["release_date"] as? String ?? "No release date"
-        backdropPath = dictionary["backdrop_path"] as! String ?? "No backdrop path"
         baseURL = "https://image.tmdb.org/t/p/w500"
+        backdropPath = dictionary["backdrop_path"] as! String ?? "No backdrop path"
         posterPath = dictionary["poster_path"] as! String ?? "No poster path"
         posterUrl = URL(string: baseURL + posterPath)!
         backdropURL = URL(string: baseURL + backdropPath)!
