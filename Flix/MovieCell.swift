@@ -3,6 +3,7 @@
 //  Flix
 //
 //  Created by Malvern Madondo on 6/21/17.
+//  Last Modified by Malvern Madondo on 8/9/18
 //  Copyright © 2017 Malvern Madondo. All rights reserved.
 //
 
@@ -21,7 +22,6 @@ class MovieCell: UITableViewCell {
         didSet {
             titleLabel.text = movie.title
             overviewLabel.text = movie.overview
-            
             let posterPathString = movie.posterPath;
             let baseURLString = "https://image.tmdb.org/t/p/w500/";
             let posterURL = URL(string: baseURLString + posterPathString)!
@@ -36,7 +36,6 @@ class MovieCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

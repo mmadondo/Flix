@@ -3,6 +3,7 @@
 //  Flix
 //
 //  Created by Malvern Madondo on 6/21/17.
+//  Modified by Malvern Madondo on 8/9/18
 //  Copyright © 2017 Malvern Madondo. All rights reserved.
 //
 
@@ -39,8 +40,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
             MovieAPIManager().nowPlayingMovies(completion: { (movies, error) in
                 if let movies = movies{
                     self.movies = movies            //movie list
-                    self.tableView.reloadData()     //make updates
-                    self.refreshControl.endRefreshing()  //stops a refresh operation
+                    self.tableView.reloadData()
+                    self.refreshControl.endRefreshing()
                     self.activityIndicator.stopAnimating()
 
                 }

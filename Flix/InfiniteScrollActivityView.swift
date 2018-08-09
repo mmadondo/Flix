@@ -3,6 +3,7 @@
 //  Flix
 //
 //  Created by Malvern Madondo on 6/22/17.
+//  Last Modified by Malvern Madondo on 8/9/18
 //  Copyright © 2017 Malvern Madondo. All rights reserved.
 //
 
@@ -43,13 +44,4 @@ class InfiniteScrollActivityView: UIView {
         self.isHidden = false
         self.activityIndicatorView.startAnimating()
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }

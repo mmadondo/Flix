@@ -3,6 +3,7 @@
 //  Flix
 //
 //  Created by Malvern Madondo on 6/22/17.
+//  Modified by Malvern Madondo on 8/9/18
 //  Copyright © 2017 Malvern Madondo. All rights reserved.
 //
 
@@ -33,12 +34,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let movie = movie{
-            
+        if let movie = movie {
             titleLabel.text = movie.title
             releaseDateLabel.text = movie.releaseDate
             overviewLabel.text = movie.overview
-            
             backDropImageView.af_setImage(withURL: movie.backdropURL)
             posterImageView.af_setImage(withURL: movie.posterUrl)
         }
@@ -51,7 +50,6 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -61,5 +59,4 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

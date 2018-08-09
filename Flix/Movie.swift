@@ -3,6 +3,7 @@
 //  Flix
 //
 //  Created by Malvern Madondo on 12/16/17.
+//  Modified by Malvern Madondo on 8/9/18
 //  Copyright © 2017 Malvern Madondo. All rights reserved.
 //
 
@@ -25,8 +26,8 @@ class Movie {
         overview = dictionary["overview"] as? String ?? "No overview"
         releaseDate = dictionary["release_date"] as? String ?? "No release date"
         baseURL = "https://image.tmdb.org/t/p/w500"
-        backdropPath = dictionary["backdrop_path"] as! String ?? "No backdrop path"
-        posterPath = dictionary["poster_path"] as! String ?? "No poster path"
+        backdropPath = dictionary["backdrop_path"] as? String ?? "No backdrop path"
+        posterPath = dictionary["poster_path"] as? String ?? "No poster path"
         posterUrl = URL(string: baseURL + posterPath)!
         backdropURL = URL(string: baseURL + backdropPath)!
     }
@@ -41,6 +42,4 @@ class Movie {
         
         return movies
     }
-    
-        
 }

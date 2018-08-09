@@ -3,6 +3,7 @@
 //  Flix
 //
 //  Created by Malvern Madondo on 12/30/17.
+//  Modified by Malvern Madondo on 8/9/18
 //  Copyright © 2017 Malvern Madondo. All rights reserved.
 //
 
@@ -26,7 +27,6 @@ class MovieAPIManager{
             if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
-                
                 let movies = Movie.movies(dictionaries: movieDictionaries)
                 completion(movies, nil)
             } else {
@@ -43,7 +43,6 @@ class MovieAPIManager{
             if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
-                
                 let movies = Movie.movies(dictionaries: movieDictionaries)
                 completion(movies, nil)
             } else {
@@ -52,5 +51,4 @@ class MovieAPIManager{
         }
         task.resume()
     }
-
 }
